@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patients</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body onload="loadPatients()">
+
+<nav>
+  <h2>Smart Hospital</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="patients.html">Patients</a></li>
+    <li><a href="doctors.html">Doctors</a></li>
+    <li><a href="appointments.html">Appointments</a></li>
+  </ul>
+</nav>
+
+<h2 class="page-title">Patient Management</h2>
+
+<!-- FORM SECTION -->
+<section class="section form-section">
+  <h2>Add New Patient</h2>
+
+  <div class="form-card">
+    <form id="patientForm" class="patient-form">
+      <input type="text" id="name" placeholder="Patient Name" required>
+      <input type="number" id="age" placeholder="Age" required>
+      <input type="text" id="disease" placeholder="Disease" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <button type="button" onclick="addPatient()">Add Patient</button>
+    </form>
+  </div>
+</section>
+
+<!-- TABLE SECTION -->
+<section class="section table-section">
+  <h2>Patient List</h2>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Disease</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody id="patientTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Smart Hospital | Patient Management</p>
+</footer>
+
+</body>
+</html>
+
